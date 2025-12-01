@@ -2164,33 +2164,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 </script>
-<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
 
-<script>
   // Your web app's Firebase configuration
   const firebaseConfig = {
-    apiKey: "AIzaSyAk5vo_TArTt56Gd4oNoxRdNfh5S4mLfJ4",
-    authDomain: "bikebuddy-73d73.firebaseapp.com",
-    projectId: "bikebuddy-73d73",
-    storageBucket: "bikebuddy-73d73.firebasestorage.app",
-    messagingSenderId: "570554674876",
-    appId: "1:570554674876:web:a49ea6d955817bd012aab9",
+    apiKey: "AIzaSyATNG9A1vwJoSNIYll-i3yuZMcb95sXpN4",
+    authDomain: "bikerent-2d4bd.firebaseapp.com",
+    projectId: "bikerent-2d4bd",
+    storageBucket: "bikerent-2d4bd.firebasestorage.app",
+    messagingSenderId: "723803698340",
+    appId: "1:723803698340:web:2bd94f79c97e4628d92231"
   };
 
   // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-
-  // ग्लोबल वैरिएबल सेट करें ताकि आपके फंक्शन्स इन्हें इस्तेमाल कर सकें
-  const auth = firebase.auth();
-  const db = firebase.database(); // <-- यह आपके डेटा सेव करने के लिए ज़रूरी है
-  const storage = firebase.storage();
-  
-  // टेस्ट के लिए Console लॉग जो आपको Initialization की पुष्टि देगा
-  console.log("Firebase initialized and ready to use 'db', 'auth', and 'storage' variables.");
-
+  const app = initializeApp(firebaseConfig);
 </script>
 
   
