@@ -2183,7 +2183,24 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
 </script>
+<script>
+  // एक सिंपल सा लॉगइन फंक्शन जो Firebase Auth यूज़ करेगा
+  function login() {
+    var phone = document.getElementById('lphone').value;
+    var password = document.getElementById('lpass').value;
+    
+    // यहां हम एक सिंपल साइन-इन विद ईमेल और पासवर्ड कर रहे हैं, जहाँ फोन को एक ईमेल फॉर्मैट में कन्वर्ट कर रहे हैं
+    var email = phone + '@example.com';
 
+    firebase.auth().signInWithEmailAndPassword(email, password)
+      .then((userCredential) => {
+        alert('लॉगइन सक्सेसफुल!');
+      })
+      .catch((error) => {
+        alert('लॉगइन फेल: ' + error.message);
+      });
+  }
+</script>
   
 </body>
 </html>
